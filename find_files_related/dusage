@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#generate disk usage table
+#MN 5/2002
+# redone 2013
+# redone 2017
+
+# du -mhs * | sort -n
+#du -ms * | sort -n
+du -h * --max-depth=1 | sort -h
+

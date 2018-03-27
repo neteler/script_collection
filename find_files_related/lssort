@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Purpose: simple script to sort entries in current directory by size
+#          --> for the truly lazy who does not want to scroll up 
+# 
+# Author:  Markus Neteler, 2007
+
+ls -la $1 |tr -s ' ' '|' |tr '|' ' ' | sort  -n -k 5
