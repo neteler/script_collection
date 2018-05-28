@@ -74,7 +74,10 @@ cat "$XMLFILE" | sed -e "s+Book Antiqua+$TARGETFONT+g" > foobar.tmp
 mv foobar.tmp "$XMLFILE"
 cat "$XMLFILE" | sed -e "s+monospace+$TARGETFONT+g" > foobar.tmp
 mv foobar.tmp "$XMLFILE"
-
+cat "$XMLFILE" | sed -e "s+Sintony+$TARGETFONT+g" > foobar.tmp
+mv foobar.tmp "$XMLFILE"
+cat "$XMLFILE" | sed -e "s+Miriam Libre+$TARGETFONT+g" > foobar.tmp
+mv foobar.tmp "$XMLFILE"
 
 done
 
