@@ -40,7 +40,7 @@ for mydir in `cat /tmp/tmp_dirlist` ; do
   cd "${mydir}"
   # find latest changed file
   #   skip broken links on the fly with: -not -xtype l
-  NEWESTFILE="`find -mindepth 1 -maxdepth 1 -not -xtype l -printf '%T+=%p\n' | sort -n | tail -n 1 | cut -d= -f2-`"
+  NEWESTFILE="`find -mindepth 1 -maxdepth 1 -not -xtype l -printf '%T+=%p\n' | grep -v '\.outside\|\.hidden' | sort -n | tail -n 1 | cut -d= -f2-`"
 
   # now apply
   CURRDIR="`pwd`"
